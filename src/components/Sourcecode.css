@@ -1,0 +1,12 @@
+.App #source-code {
+    text-decoration: none;
+  }
+  .App .Sourcecode {
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute !important;
+    left: 11px;
+    bottom: 1px;
+  }
+  

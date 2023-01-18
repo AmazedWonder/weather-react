@@ -1,0 +1,162 @@
+.App .Flexbox {
+    z-index: 1000;
+    position: absolute;
+    top: 80px;
+    right: 250px;
+    width: 120px;
+    height: 120px;
+    transition: all 150ms ease-in-out;
+  }
+  
+  .App #icon1 {
+    width: 40px;
+    height: 40px;
+  }
+  .App .Currentbutton {
+    z-index: 1000;
+    position: absolute;
+    background-color: #d1cdf5;
+    display: block;
+    margin: 0 auto;
+    left: 218px;
+    top: 290px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    border: 1px;
+    border-radius: 7px;
+    color: #b44d08;
+  }
+  
+  .App .Temp {
+    z-index: 1000;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-size: 50px;
+    font-weight: 100;
+    left: 271px;
+    top: 102px;
+  }
+  
+  /* .App #D {
+    z-index: 1000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+  } */
+  
+  .App .Degree {
+    z-index: 1000;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    left: 274px;
+    top: 157px;
+  }
+  
+  .App .Date {
+    z-index: 1000;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-size: 12.5px;
+    top: 185px;
+  }
+  .App .Rule {
+    z-index: 1000;
+    position: absolute;
+    border: 1px solid #b44d08;
+    border-radius: 10px;
+    width: 90px;
+    margin: 0px;
+    opacity: 1;
+    left: 206px;
+    top: 200px;
+  }
+  
+  .App .Measurement {
+    z-index: 1000;
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    font-size: 12px;
+    left: 236px;
+    top: 210px;
+    font-weight: 400;
+  }
+  
+  /* .App Nonactive {
+    z-index: 1000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+  } */
+  
+  .App .Nonactive:link,
+  .Active:link {
+    text-decoration: none;
+  }
+  
+  .App .Nonactive:hover,
+  .Active:hover {
+    text-decoration: none;
+  }
+  
+  .App .Nonactive:active,
+  .Active:active {
+    text-decoration: none;
+    color: #f17022;
+  }
+  
+  .App .Active {
+    color: #000000;
+    cursor: default;
+  }
+  
+  /* .App Active {
+    z-index: 1000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+  } */
+  
+  .App .Time {
+    z-index: 1000;
+    position: absolute;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    right: 20px;
+    top: 10px;
+    color: aliceblue;
+  }
+  
+  .App svg[icon="bytesize:location"] {
+    z-index: 1000;
+    font-size: large;
+    color: aliceblue;
+    font-weight: 200;
+  }
+  
+  .App .Humiditywind {
+    font-family: "Noto Sans", sans-serif;
+  }
+  
+  .App .weather-forecast {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .App .weather-forecast-date {
+    font-size: 11px;
+  }
+  
+  .App .weather-forecast-description {
+    font-size: 9px;
+    margin-bottom: 9px;
+    text-transform: capitalize;
+  }
+  
+  .App .weather-forecast-degree {
+    font-size: 9px;
+  }
+  
