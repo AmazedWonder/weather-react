@@ -4,7 +4,7 @@ function Sourcecode() {
   return (
     <div className="Sourcecode">
       <a
-        href="https://github.com/AmazedWonder/Weather_App"
+        href="https://github.com/AmazedWonder/weather-react"
         target="_blank"
         rel="noopener noreferrer"
         id="source-code"
