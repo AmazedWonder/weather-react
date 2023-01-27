@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Weatherinfo from "./Weatherinfo";
 
 
 function Weatherupdate(props) {
   const [weatherData, setWeatherData] = useState({ feedback: false });
   // const [feedback, setFeedback] = useState(false);
-  // const [city, setCity] = useState("");
-  // const [location, setLocation] = useState(props.location);
+  const [city, setCity] = useState(props.location);
+  // const [location, setLocation] = useState("");
 
   // function farenheitTemperature(event) {
   //   event.preventDefault();
@@ -29,6 +30,25 @@ function Weatherupdate(props) {
     // alert(`${temperature}°C`);
   // }
 
+  function search() {
+    // city
+    const apiKey = "8a582b67c117653fdcad72d407d325fe";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+
+  }
+
+  function handleSubmit(event) {
+      event.preventDefault();
+      // alert(`It is 29° in ${city}`);
+      search();
+    }
+  
+    function updateCity(event) {
+      setCity(event.target.value);
+    }
+  
+
   function handleResponse(response) {
     console.log(response.data);
     
@@ -39,11 +59,11 @@ function Weatherupdate(props) {
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      alt: `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`,
+      // alt: `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`,
       description: response.data.weather[0].description,
       hi: Math.round(response.data.main.temp_max),
       lo: Math.round(response.data.main.temp_min),
-      // date: "Tue, Dec 2022",
+      date: new Date(response.data.dt * 1000),
       // time: 09:45,
     });
   }
@@ -61,7 +81,7 @@ function Weatherupdate(props) {
           Right now in 
           <div style={{ display: "inline-block" }}>
             <form
-              // onSubmit={handleSubmit}
+              onSubmit={handleSubmit}
               className="searchbox"
               id="searchbox"
               action="/action_page.php"
@@ -70,7 +90,7 @@ function Weatherupdate(props) {
             >
               <input
                 type="text"
-                // onChange={updateCity}
+                onChange={updateCity}
                 id="search-text-input"
                 name="search"
                 placeholder="your location..."
@@ -85,139 +105,18 @@ function Weatherupdate(props) {
           {/* description */}
           <div
           className="text-capitalize"
-            style={{ fontSize: "15px", marginLeft: "58px" }}
+            style={{ fontSize: "15px", marginLeft: "-50px", textAlign: "center" }}
           >
             {" "}
             {weatherData.description}{" "}
           </div>
         </div>
-        <div
-          className="Location"
-          // id="city"
-          style={{ fontSize: "18px" }}
-        >
-          {" "}
-          <iconify-icon icon="bytesize:location" style={{ fontSize: "large" }}>
-            location{" "}
-          </iconify-icon>{" "}
-          {/* <span id="yLocation"> */}
-          {weatherData.city} {/* </span> */}
-        </div>
-        <p> The weather in {weatherData.city} is {weatherData.temperature}19°</p>
-
-         {/* Main Weather img */}
-         <div>
-          <img
-          src={weatherData.icon}
-          id="icon"
-          alt={weatherData.alt}
-          className="Flexbox"/>
-          </div>
-
-          {/* Temperature display */}
-          
-          <div className="Temp">
-            <span>
-              {Math.round(weatherData.temperature)}°
-              </span>
-          </div>
-
-            {/* Degree */}
-            <div className="Degree">
-              H:{weatherData.hi}° 
-              L:{weatherData.lo}°
-            </div>
-
-            {/* Date */}
-            <div
-              className="Date"
-              
-              style={{ left: "211px", fontWeight: "650", position: "absolute" }}
-            >
-              {props.date}
-            </div>
-
-            <div>
-              <hr className="Rule" />
-            </div>
-
-            {/* CelsiusTemperature and FarenheitTemperature */}
-            <div className="Measurement">
-              <span>
-                {" "}
-                <a
-                  href="/"
-                  
-                  // onClick={celsiusTemperature}
-                  className="Active"
-                >
-                  {" "}
-                  <b>°C</b>{" "}
-                </a>{" "}
-              </span>
-              |
-              <span>
-                {" "}
-                <a
-                  className="Nonactive"
-                  href="/"
-                  // onClick={farenheitTemperature}
-                >
-                  {" "}
-                  <b>°F</b>{" "}
-                </a>{" "}
-              </span>
-            </div>
-
-            {/* Time */}
-            <div
-              className="Time"
-            >
-              {props.time}
-            </div>
-
-            {/* Current button */}
-            <div>
-              <button className="Currentbutton">Current</button>
-            </div>
-
-            {/* Humidity and Wind */}
-            <div className="Humiditywind col-2">
-              <ul
-                style={{
-                  zIndex: "1000",
-                  listStyle: "none",
-                  fontSize: "12px",
-                  color: "aliceblue",
-                  position: "absolute",
-                  top: "11px",
-                  left: "-10px",
-                  lineHeight: "2"
-                }}
-              >
-                <li>
-                  Humidity:
-                  {weatherData.humidity}%
-                </li>
-                <li>
-                  Wind:
-                  {weatherData.wind}km/h
-                </li>
-              </ul>
-            </div>
-
-            {/* Forecast */}
-            <div
-              className="Weatherforecast"
-              // id="forecast"
-            ></div>
+        <Weatherinfo data={weatherData} />
+        
     </div>
   );
 } else {
-  const apiKey = "8a582b67c117653fdcad72d407d325fe";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.location}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(handleResponse);
-
+  search();
   return "Loading...";
 }
 
