@@ -1,6 +1,7 @@
 import React from "react";
 import Currentdate from "./Currentdate";
 import Upgradedtime from "./Upgradedtime";
+import WeatherMetrics from "./WeatherMetrics";
 
 
 function Weatherinfo(props) {
@@ -19,7 +20,7 @@ function Weatherinfo(props) {
             {/* <span id="yLocation"> */}
             {props.data.city} {/* </span> */}
             </div>
-            <p> The weather in {props.data.city} is {props.data.temperature}19°</p>
+            <p> The weather in {props.data.city} is {Math.round(props.data.temperature)}°</p>
             {/* Main Weather img */}
             <div>
                 <img
@@ -31,11 +32,11 @@ function Weatherinfo(props) {
 
                 {/* Temperature display */}
                 
-                <div className="Temp">
+                {/* <div className="Temp">
                 <span>
-                    {Math.round(props.data.temperature)}°
+                    {props.data.temperature}°
                     </span>
-                </div>
+                </div> */}
 
                 {/* Degree */}
                 <div className="Degree">
@@ -47,7 +48,7 @@ function Weatherinfo(props) {
                 <div
                     className="Date"
                     
-                    style={{ left: "213px", fontWeight: "650", position: "absolute" }}
+                    style={{ left: "211px", fontWeight: "650", position: "absolute" }}
                 >
                     <Currentdate date={props.data.date} />
                 </div>
@@ -58,30 +59,8 @@ function Weatherinfo(props) {
 
                 {/* CelsiusTemperature and FarenheitTemperature */}
                 <div className="Measurement">
-                    <span>
-                    {" "}
-                    <a
-                        href="/"
-                        
-                        // onClick={celsiusTemperature}
-                        className="Active"
-                    >
-                        {" "}
-                        <b>°C</b>{" "}
-                    </a>{" "}
-                    </span>
-                    |
-                    <span>
-                    {" "}
-                    <a
-                        className="Nonactive"
-                        href="/"
-                        // onClick={farenheitTemperature}
-                    >
-                        {" "}
-                        <b>°F</b>{" "}
-                    </a>{" "}
-                    </span>
+                    <WeatherMetrics celsius={props.data.temperature} />
+                   
                 </div>
 
                 {/* Time */}

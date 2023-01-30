@@ -9,27 +9,7 @@ function Weatherupdate(props) {
   const [city, setCity] = useState(props.location);
   // const [location, setLocation] = useState("");
 
-  // function farenheitTemperature(event) {
-  //   event.preventDefault();
-  //   setTemperature(Math.round(props.temperature * 1.8 + 32));
-
-    // let temperature = props.temperature * 1.8 + 32;
-    // ntwork
-    // return Math.round(temperature);
-    // alert(`${Math.round(temperature)}°F`);
-  // }
-
-  // function celsiusTemperature(event) {
-  //   event.preventDefault();
-  //   setTemperature(props.temperature);
-
-    // let temperature = props.temperature;
-    //  - 32 * .5556;
-    // ntwork
-    // return Math.round(temperature);
-    // alert(`${temperature}°C`);
-  // }
-
+  
   function search() {
     // city
     const apiKey = "8a582b67c117653fdcad72d407d325fe";
@@ -54,7 +34,7 @@ function Weatherupdate(props) {
     
     setWeatherData({
       feedback: true,
-      temperature: response.data.main.temp,
+      temperature: Math.round(response.data.main.temp),
       city: response.data.name,
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
@@ -66,6 +46,7 @@ function Weatherupdate(props) {
       date: new Date(response.data.dt * 1000),
       // time: 09:45,
     });
+    
   }
   
   
@@ -105,7 +86,7 @@ function Weatherupdate(props) {
           {/* description */}
           <div
           className="text-capitalize"
-            style={{ fontSize: "15px", marginLeft: "-50px", textAlign: "center" }}
+            style={{ fontSize: "15px", marginLeft: "-66px", textAlign: "center" }}
           >
             {" "}
             {weatherData.description}{" "}

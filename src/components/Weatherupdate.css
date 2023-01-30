@@ -91,22 +91,6 @@
     color: #b44d08;
   }
   
-  .App .Temp {
-    z-index: 1000;
-    position: absolute;
-    font-family: "Roboto", sans-serif;
-    font-size: 50px;
-    font-weight: 100;
-    left: 271px;
-    top: 102px;
-  }
-  
-  /* .App #D {
-    z-index: 1000;
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-size: 50px;
-  } */
   
   .App .Degree {
     z-index: 1000;
@@ -146,41 +130,6 @@
     top: 210px;
     font-weight: 400;
   }
-  
-  /* .App Nonactive {
-    z-index: 1000;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-  } */
-  
-  .App .Nonactive:link,
-  .Active:link {
-    text-decoration: none;
-  }
-  
-  .App .Nonactive:hover,
-  .Active:hover {
-    text-decoration: none;
-  }
-  
-  .App .Nonactive:active,
-  .Active:active {
-    text-decoration: none;
-    color: #f17022;
-  }
-  
-  .App .Active {
-    color: #000000;
-    cursor: default;
-  }
-  
-  /* .App Active {
-    z-index: 1000;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-  } */
   
   .App .Time {
     z-index: 1000;

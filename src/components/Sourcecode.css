@@ -2,15 +2,10 @@
     text-decoration: none;
   }
   .App .Sourcecode {
-    /* text-align: center; */
     font-size: 10px;
     font-weight: bold;
     max-width: 482px;
     margin: 0px auto;
     padding: 0px;
-    /* position: absolute !important; */
-    /* margin: 10px 0; */
-    /* left: 440px; */
-    /* bottom: 1px; */
   }
   

@@ -1,9 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
-// import Form from "./components/Form";
 import Sourcecode from "./components/Sourcecode";
 import "./components/Sourcecode.css";
-import "./components/Form.css";
 import Weatherupdate from "./components/Weatherupdate";
 import "./components/Weatherupdate.css";
 
@@ -25,7 +23,6 @@ function App() {
         <div className="Circle2"></div>
         <div className="Circle3"></div>
         <div className="Background">
-          {/* <Form description="Sunny" location="New York" /> */}
           
 
           <Weatherupdate
