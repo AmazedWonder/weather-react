@@ -99,7 +99,6 @@ function Weatherupdate(props) {
         </div>
         <Weatherinfo data={weatherData} />
         <WeatherForecast  coordinates={weatherData.coords}/>
-        {/* icon={weatherData} */}
     </div>
   );
 } else {

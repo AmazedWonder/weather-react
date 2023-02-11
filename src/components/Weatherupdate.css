@@ -60,18 +60,6 @@
   right: 20px;
   top: 40px;
 }
-
-
-/* .App .Flexbox {
-    z-index: 1000;
-    position: absolute;
-    top: 80px;
-    right: 243px;
-    width: 120px;
-    height: 120px;
-    transition: all 150ms ease-in-out;
-  } */
-  
   .App #icon1 {
     width: 40px;
     height: 40px;
@@ -79,7 +67,6 @@
   .App .Currentbutton {
     z-index: 1000;
     position: absolute;
-    /* background-color: #d1cdf5; */
     background-color: #311831;
     display: block;
     margin: 0 auto;
@@ -89,7 +76,6 @@
     /* font-weight: 600; */
     border: 1px;
     border-radius: 7px;
-    /* color: #b44d08; */
     color: aliceblue;
   }
   
@@ -114,7 +100,6 @@
   .App .Rule {
     z-index: 1000;
     position: absolute;
-    /* border: 1px solid #b44d08; */
     border: 1px solid #4c474d;
     border-radius: 10px;
     width: 90px;
@@ -145,24 +130,3 @@
   .App .Humiditywind {
     font-family: "Noto Sans", sans-serif;
   }
-  
-  /* .App .weather-forecast {
-    margin-top: 20px;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .App .weather-forecast-date {
-    font-size: 11px;
-  }
-  
-  .App .weather-forecast-description {
-    font-size: 9px;
-    margin-bottom: 9px;
-    text-transform: capitalize;
-  }
-  
-  .App .weather-forecast-degree {
-    font-size: 9px;
-  }
-   */

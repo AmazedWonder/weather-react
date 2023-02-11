@@ -21,10 +21,7 @@ function Weatherinfo(props) {
             {/* Main Weather icon */}
             <div className="Flexbox">
                 <WeatherIcon code=  {`http://openweathermap.org/img/wn/${props.data.icon}@2x.png`} alt={props.data.description} width={120} height={120} />
-                {/* style={{
-                       width: "120",
-                        height: "120",
-                    }} */}
+                
                 {/* <img
                 src={props.data.icon}
                 // id="icon"
@@ -102,13 +99,7 @@ function Weatherinfo(props) {
                 </ul>
             </div>
 
-            {/* Forecast */}
-            {/* <div
-                className="Weatherforecast"
-                // id="forecast"
-            >
-
-            </div> */}
+        
         </div>
     );
 }

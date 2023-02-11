@@ -1,6 +1,5 @@
 .WeatherMetrics {
   font-family: "Roboto", sans-serif;
-  
 }
 
 
@@ -11,11 +10,7 @@
   position: absolute;  
   top: 96px; 
   left: 275px;
-    /* left: 294px;
-    top: -284px; */
   }
-
-   /* position: absolute; */
 
    .App a {
     text-decoration: none;

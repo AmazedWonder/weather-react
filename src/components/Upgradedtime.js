@@ -14,8 +14,6 @@ function Upgradedtime(props) {
         minutes = `0${minutes}`;
     }
     
-    // return `${hours}:${minutes}`;
-    
     
     return <div>
        {hours}:{minutes}
