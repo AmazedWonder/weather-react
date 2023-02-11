@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Weatherinfo from "./Weatherinfo";
+import WeatherForecast from "./WeatherForecast";
 
 
 function Weatherupdate(props) {
   const [weatherData, setWeatherData] = useState({ feedback: false });
   // const [feedback, setFeedback] = useState(false);
-  const [city, setCity] = useState(props.location);
-  // const [location, setLocation] = useState("");
+  const [city, setCity] = useState(props.location); // const [location, setLocation] = useState("");
 
   
   function search() {
@@ -20,7 +20,7 @@ function Weatherupdate(props) {
 
   function handleSubmit(event) {
       event.preventDefault();
-      // alert(`It is 29° in ${city}`);
+      
       search();
     }
   
@@ -30,21 +30,26 @@ function Weatherupdate(props) {
   
 
   function handleResponse(response) {
-    console.log(response.data);
+    // console.log(response.data);
+    
     
     setWeatherData({
+
       feedback: true,
+      coords: response.data.coord,
       temperature: Math.round(response.data.main.temp),
       city: response.data.name,
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon:  response.data.weather[0].icon ,
+      // `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       // alt: `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`,
       description: response.data.weather[0].description,
       hi: Math.round(response.data.main.temp_max),
       lo: Math.round(response.data.main.temp_min),
       date: new Date(response.data.dt * 1000),
-      // time: 09:45,
+     
+      
     });
     
   }
@@ -86,14 +91,15 @@ function Weatherupdate(props) {
           {/* description */}
           <div
           className="text-capitalize"
-            style={{ fontSize: "15px", marginLeft: "-66px", textAlign: "center" }}
+            style={{ fontSize: "15px", marginLeft: "-66px", textAlign: "center", fontWeight: "normal" }}
           >
             {" "}
             {weatherData.description}{" "}
           </div>
         </div>
         <Weatherinfo data={weatherData} />
-        
+        <WeatherForecast  coordinates={weatherData.coords}/>
+        {/* icon={weatherData} */}
     </div>
   );
 } else {

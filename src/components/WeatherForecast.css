@@ -1,0 +1,38 @@
+.WeatherForecast {
+    text-align: center;
+    /* font-weight: bold; */
+    margin-top: 20px;
+    color: rgb(248, 245, 245);
+}
+
+ .Min {
+    opacity: 0.6;
+}
+
+.WeatherForecast-icon1 {
+    width: 40px;
+    height: 40px;
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; */
+    display: grid;
+    place-items: center;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .WeatherForecast-day {
+    font-size: 13px;
+  }
+  
+  .WeatherForecast-description {
+    font-size: 12px;
+    
+    text-transform: capitalize;
+  }
+  
+  .WeatherForecast-temp {
+    font-size: 10px;
+    margin-bottom: 20px;
+  }

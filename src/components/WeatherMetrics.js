@@ -27,7 +27,9 @@ function WeatherMetrics(props) {
             {temperature}°
           </span>
         </div> 
-        {unit === "celsius" && (
+
+        <div className="Metrics">
+          {unit === "celsius" && (
           <>
             <span>
               {/* <a href="/" onClick={celsiusTemperature} className={unit === "celsius" ? "unit" : "non-active"}> */}
@@ -62,6 +64,8 @@ function WeatherMetrics(props) {
           </>
         )}
         {/* <span className="temperature">{temperature}°{unit.toUpperCase()}</span> */}
+        </div>
+        
       </div>
     );
 

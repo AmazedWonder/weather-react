@@ -4,6 +4,7 @@ import Sourcecode from "./components/Sourcecode";
 import "./components/Sourcecode.css";
 import Weatherupdate from "./components/Weatherupdate";
 import "./components/Weatherupdate.css";
+import cloudybrightSky from "./Images/cloudybrightSky.jpg";
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       <div className="Container">
         <div>
           <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/056/864/original/weatherbg5.jpg?1670417343"
+            src={cloudybrightSky}
             alt="city"
             className="imageOne"
           />

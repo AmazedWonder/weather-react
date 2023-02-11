@@ -1,0 +1,19 @@
+ .Flexbox {
+    z-index: 1000;
+    position: absolute;
+    top: 74px;
+    right: 232px;
+    /* width: 120px;
+    height: 120px; */
+    transition: all 150ms ease-in-out;
+  }
+
+  /* .Metrics1 {
+    z-index: 1000;
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    font-size: 12px;
+    left: 236px;
+    top: 210px;
+    font-weight: 400;
+  } */

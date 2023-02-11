@@ -18,9 +18,10 @@
   max-width: 500px;
   margin: 80px auto;
   margin-bottom: 0px;
-  height: 500px;
+  /* height: 500px; */
   width: 500px;
-  background-color: #b44d08;
+  /* background-color: #011813; */
+  background-color: #000000;
   border-radius: 10px;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
