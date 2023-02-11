@@ -4,7 +4,7 @@ import Sourcecode from "./components/Sourcecode";
 import "./components/Sourcecode.css";
 import Weatherupdate from "./components/Weatherupdate";
 import "./components/Weatherupdate.css";
-import cloudybrightSky from "./Images/cloudybrightSky.jpg";
+import cityy1img from "./Images/cityy1img.jpg";
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <div className="Container">
         <div>
           <img
-            src={cloudybrightSky}
+            src={cityy1img}
             alt="city"
             className="imageOne"
           />
