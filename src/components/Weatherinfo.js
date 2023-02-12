@@ -89,11 +89,11 @@ function Weatherinfo(props) {
                     }}
                     >
                     <li>
-                        Humidity:
+                        Humidity: {""}
                         {props.data.humidity}%
                     </li>
                     <li>
-                        Wind:
+                        Wind: {""}
                         {props.data.wind}km/h
                     </li>
                 </ul>
